@@ -1,0 +1,22 @@
+<title>New</title>
+
+<h1>Add new Product</h1>
+
+<form action="/products" method="POST">
+    <label for="name">Product Name</label>
+    <input type="text" placeholder="name" name="name" id="name" required>
+
+    <label for="name">Price (per Unit in rupees)</label>
+    <input type="number" id="price" placeholder="" name="price" required>
+
+    <label for="category">Category</label>
+    <select name="category" id="category">
+        <option value="fruit">fruit</option>
+        <option value="vegetable">vegetable</option>
+        <option value="pulses">pulses</option>
+        <option value="dairy">dairy</option>
+    </select>
+    <button type="submit">Add</button>
+</form>
+
+<a href="/products">All Products</a>

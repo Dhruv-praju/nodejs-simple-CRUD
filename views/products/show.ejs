@@ -1,0 +1,12 @@
+<title>Show</title>
+
+<a href="/products">back</a>
+<h2><%= product.name %> </h2>
+<ul>
+    <li><h3> price (per unit in rupees): <%= product.price %></h3></li>
+    <li><h3>category: <a href="/products?category=<%= product.category %> "><%= product.category %></a></h3></li>
+</ul>
+<a href="/products/<%= product.id %>/edit">edit</a>
+<form action="/products/<%= product._id %>?_method=DELETE" method="POST">
+    <button type="submit">delete</button>
+</form>

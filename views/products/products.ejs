@@ -1,0 +1,16 @@
+<title>Products</title>
+<h1><%= category %> Products !</h1>
+<ul>
+    <% products.forEach(p=>{ %>
+        <li> <a href="/products/<%= p.id %>" ><b><%= p.name %></b></a></li>
+
+    <% }) %> 
+</ul>
+<a href="/products/new">Add new product</a> <br><br>
+<% if(category!== 'All'){ %>
+    <a href="/products">All products</a>
+    <% } %> 
+
+<form action="/products?_method=DELETE" method="POST">
+    <button type="submit">Delete All</button>
+</form>

@@ -1,0 +1,30 @@
+<title>Edit</title>
+
+<h1>Edit Product</h1>
+
+<form action="/products/<%= product._id %>?_method=PUT" method="POST">
+    <label for="name">Product Name</label>
+    <input type="text" placeholder="name" name="name" id="name" value="<%= product.name %>" required>
+    
+    <label for="price">Price (per Unit in rupees)</label>
+    <input type="number" id="price" placeholder="" name="price" value="<%= product.price %>" required>
+    
+    <label for="category">Category</label>
+    <select name="category" id="category">
+        <option value="fruit" <% if(product.category=='fruit'){ %>
+            selected
+        <% } %> >fruit</option>
+        <option value="vegetable" <% if(product.category=='vegetable'){ %>
+            selected 
+        <% } %> >vegetable</option>
+        <option value="pulses" <%  if(product.category=='pulses'){ %>
+            selected
+        <% } %>  >pulses</option>
+        <option value="dairy" <%  if(product.category=='dairy'){ %>
+            selected
+        <% } %> >dairy</option>
+    </select>
+    <button type="submit">submit</button>
+</form>
+
+<a href="/products/<%= product._id %>">Cancel</a>
